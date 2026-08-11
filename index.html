@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clock.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/quote.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/logout.css">
+    <link rel="stylesheet" href="css/shortcuts.css">
+    <title>Selfmade Momentum</title>
+</head>
+<body>
+    <div id="shortcuts-container">
+        <div id="shortcuts-list"></div>
+        <button id="toggle-shortcut-btn" title="바로가기 추가">+</button>
+        <form id="shortcut-form" class="hidden">
+            <input
+            type="text"
+            id="shortcut-name"
+            placeholder="이름 (예: 구글)"
+            autocomplete="off"
+            required
+            />
+            <input
+            type="text"
+            id="shortcut-url"
+            placeholder="주소"
+            autocomplete="off"
+            required
+            />
+            <button type="submit">추가</button>
+        </form>
+    </div>
+    <h2 id="clock">00:00:00</h2>
+    <form id="login-form" class="hidden">
+        <input 
+        required 
+        maxlength="15" 
+        type="text" 
+        placeholder="이름을 알려주세요"
+        />
+        <input type="submit" value="Log In">
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <button id="logout-btn" class="hidden">Log Out</button>
+    <div id="todo-container">
+        <form id="todo-form">
+            <input type="text" placeholder="To Do List 추가하기" required>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+    <div id="quote">
+        <span></span><br>
+        <span></span>
+    </div>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/shortcuts.js"></script>
+</body>
+</html>

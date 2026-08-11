@@ -1,0 +1,11 @@
+#quote{
+    position: absolute;
+    bottom: 30px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    max-width: 80%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}

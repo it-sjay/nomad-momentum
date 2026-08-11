@@ -1,0 +1,164 @@
+#shortcuts-container{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12;
+    max-width: 600px;
+    z-index:10;
+}
+
+#shortcuts-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 12px;
+    max-width: 600px;
+    justify-content: flex-start;
+}
+
+#shortcuts-list li{
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px soild rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    padding: 6px, 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#shortcuts-list li:hover{
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+#shortcuts-list a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.favicon{
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.delete-btn{
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    font-size: 10px;
+    padding: 0 2px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.delete-btn:hover{
+    color: #ff5c5c;
+    transform: scale(1.2);
+}
+
+#toggle-shortcut-btn{
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    margin-left: 8px;
+    margin-top: -4px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+#toggle-shortcut-btn:hover{
+    background: rgba(255,255,255,0.4);
+    transform: rotate(90deg);
+}
+
+#shortcut-form{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    margin-left: 8px;
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width:max-content;
+    padding: 10px 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255, 0.15);
+    transform-origin: left center;
+    animation: fadeInRight 0.3s ease-out;
+    /* animation: fadeInDown 0.3s ease-out; */
+    z-index:20;
+}
+/*
+@keyframes fadeInDown{
+    from{
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}*/
+
+@keyframes fadeInRight{
+    from{
+        opacity: 0;
+        transform: translateY(-50%) translateX(-8px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+#shortcut-form input{
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    width: 130px;
+    flex-shrink:0;
+    padding: 6px 12px;
+    color: white;
+    font-size: 12px;
+    outline: none;
+}
+
+#shortcut-form button{
+    background: rgba(255,255,255,0.25);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#shortcut-form input::placeholder{
+    color: rgba(255,255,255,0.65);
+}
