@@ -67,3 +67,12 @@
     cursor: pointer;
     user-select: none;
 }
+
+@media screen and (max-width: 768px){
+    #todo-container{
+        bottom: 70px;
+        right: 20px;
+        width: 240px;
+        max-height: 200px;
+    }
+}
